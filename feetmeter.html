@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html manifest="/cache.appcache">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meter to Feet Conversion</title>
+    <link rel="stylesheet" href="CSS/mystyles.css">
+</head>
+
+<body>
+    <h1>Meter to Feet Conversion</h1>
+    <hr>
+    <main>
+        <div align="center">
+            <select name="meter" id="meter">
+                <option value="">- Cleared To -</option>
+                <hr />
+                <optgroup label="Altitudes">
+                    <option value="600">600 m</option>
+                    <option value="900">900 m</option>
+                    <option value="1200">1200 m</option>
+                    <option value="1500">1500 m</option>
+                    <option value="1800">1800 m</option>
+                    <option value="2100">2100 m</option>
+                    <option value="2400">2400 m</option>
+                    <option value="2700">2700 m</option>
+                    <option value="3000">3000 m</option>
+                    <option value="3300">3300 m</option>
+                </optgroup>
+                <hr />
+                <optgroup label="Fls Below RVSM">
+                    <option value="3600">3600 m</option>
+                    <option value="3900">3900 m</option>
+                    <option value="4200">4200 m</option>
+                    <option value="4500">4500 m</option>
+                    <option value="4800">4800 m</option>
+                    <option value="5100">5100 m</option>
+                    <option value="5400">5400 m</option>
+                    <option value="5700">5700 m</option>
+                    <option value="6000">6000 m</option>
+                    <option value="6300">6300 m</option>
+                    <option value="6600">6600 m</option>
+                    <option value="6900">6900 m</option>
+                    <option value="7200">7200 m</option>
+                    <option value="7500">7500 m</option>
+                    <option value="7800">7800 m</option>
+                    <option value="8100">8100 m</option>
+                    <option value="8400">8400 m</option>
+                </optgroup>
+                <hr />
+                <optgroup label="RVSM FLs">
+                    <option value="8900">8900 m</option>
+                    <option value="9200">9200 m</option>
+                    <option value="9500">9500 m</option>
+                    <option value="9800">9800 m</option>
+                    <option value="10100">10100 m</option>
+                    <option value="10400">10400 m</option>
+                    <option value="10700">10700 m</option>
+                    <option value="11000">11000 m</option>
+                    <option value="11300">11300 m</option>
+                    <option value="11600">11600 m</option>
+                    <option value="11900">11900 m</option>
+                    <option value="12200">12200 m</option>
+                    <option value="12500">12500 m</option>
+                </optgroup>
+                <hr />
+                <optgroup label="FLs Above RVSM">
+                    <option value="13100">13100 m</option>
+                    <option value="13700">13700 m</option>
+                    <option value="14300">14300 m</option>
+                    <option value="14900">14900 m</option>
+                    <option value="15500">15500 m</option>
+                </optgroup>
+            </select>
+
+        </div>
+        <p style="font-size: 50px; font-weight: bold;"> Set :
+        <div id="feet"
+            style="font-size: 70Px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: #FFE8A3; text-align: center;">
+        </div>
+
+        <script>
+            var meter = document.getElementById("meter"),
+                feet = document.getElementById("feet"),
+                altConv = {
+                    noSelection: "",
+                    600: "2000 feet",
+                    900: "3000 feet",
+                    1200: "3900 feet",
+                    1500: "4900 feet",
+                    1800: "5900 feet",
+                    2100: "6900 feet",
+                    2400: "7900 feet",
+                    2700: "8900 feet",
+                    3000: "9800 feet",
+                    3300: "10800 feet",
+                    3600: "11800 feet",
+                    3900: "12800 feet",
+                    4200: "13800 feet",
+                    4500: "14800 feet",
+                    4800: "15700 feet",
+                    5100: "16700 feet",
+                    5400: "17700 feet",
+                    5700: "18700 feet",
+                    6000: "19700 feet",
+                    6300: "20700 feet",
+                    6600: "21700 feet",
+                    6900: "22600 feet",
+                    7200: "23600 feet",
+                    7500: "24600 feet",
+                    7800: "25600 feet",
+                    8100: "26600 feet",
+                    8400: "27600 feet",
+                    8900: "29100 feet",
+                    9200: "30100 feet",
+                    9500: "31100 feet",
+                    9800: "32100 feet",
+                    10100: "33100 feet",
+                    10400: "34100 feet",
+                    10700: "35100 feet",
+                    11000: "36100 feet",
+                    11300: "37100 feet",
+                    11600: "38100 feet",
+                    11900: "39100 feet",
+                    12200: "40100 feet",
+                    12500: "41100 feet",
+                    13100: "43000 feet",
+                    13700: "44900 feet",
+                    14300: "46900 feet",
+                    14900: "48900 feet",
+                    15500: "50900 feet",
+                }
+            meter.onchange = function () {
+                feet.innerHTML = altConv[this.value];
+            }
+        </script>
+        </p>
+
+    </main>
+
+    <hr>
+
+
+    <a href="/index.html">
+        <div align="center">
+            <div style="background-color:#FFE8A3; width: 120px; height: 100px; border-radius: 15px; " align="center">
+                <img src="assets/img/homeicon.png" alt="Home">
+            </div>
+        </div>
+    </a>
+</body>
+
+</html>
